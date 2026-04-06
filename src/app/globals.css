@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #09090b;
+  --color-surface: #18181b;
+  --color-border: #27272a;
+  --color-text: #fafafa;
+  --color-muted: #71717a;
+  --color-accent: #a78bfa;
+  --color-accent-2: #818cf8;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-syne), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #09090b;
+}
+
+body {
+  background-color: #09090b;
+  color: #fafafa;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #a78bfa33;
+  color: #fafafa;
+}
+
+/* Gradient orb animation */
+@keyframes float-orb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 10px) scale(0.97); }
+}
+
+.orb {
+  animation: float-orb 12s ease-in-out infinite;
+  filter: blur(80px);
+  border-radius: 9999px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.orb-1 {
+  animation-delay: 0s;
+  animation-duration: 14s;
+}
+.orb-2 {
+  animation-delay: -4s;
+  animation-duration: 18s;
+}
+.orb-3 {
+  animation-delay: -8s;
+  animation-duration: 20s;
+}
