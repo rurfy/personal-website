@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"npm run build 2>&1 && npm start &\\nsleep 8\\ncurl -s -o /dev/null -w \\\"/ -> %{http_code}\\\\n\\\" http://localhost:3000/\\ncurl -s -o /dev/null -w \\\"/beerpong/privacy-policy/ -> %{http_code}\\\\n\\...",
-  "error": "Exit code 1\n\n> personal-website@1.0.0 build\n> next build\n\n▲ Next.js 16.2.2 (Turbopack)\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 1332ms\n  Running TypeScript ...\n  Finished TypeScript in 1366ms ...\n  Collecting page data using 4 workers ...\n  Generating static pages using 4 workers (0/3) ...\n✓ Generating static pages using 4 workers (3/3) in 217ms\n  Finalizing page optimization ...\n\nRoute (app)\n┌ ○ /\n└ ○ /_not-found\n\n\n○  (Static)  prerendered as static content\n\n\n> p...",
-  "timestamp": "2026-04-05T23:46:47.641Z",
-  "retry_count": 1
-}

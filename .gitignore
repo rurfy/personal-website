@@ -30,6 +30,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# OMC session state (ephemeral)
+.omc/state/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
