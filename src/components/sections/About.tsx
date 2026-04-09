@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import AnimatedSection from '@/components/AnimatedSection'
 import { slideInLeft, slideInRight } from '@/lib/animations'
 
@@ -18,19 +19,24 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-[#71717a] text-lg leading-relaxed">
               <p>
-                I&apos;m a software engineer based in Germany, passionate about building
-                mobile and web applications that solve real problems and feel genuinely
-                great to use.
+                I&apos;m Christopher — a Junior Software Developer at{' '}
+                <span className="text-[#fafafa] font-medium">ADCELL GmbH</span>, based
+                in Germany. I got into coding because I wanted to build my own Minecraft
+                mod after getting hooked on Feed the Beast. That rabbit hole never ended.
               </p>
               <p>
-                Right now I&apos;m working on{' '}
+                Right now I&apos;m building{' '}
                 <span className="text-[#fafafa] font-medium">Beerpong App</span> — a
-                Flutter app that brings the chaos of beer pong night into a clean,
-                real-time experience. No spreadsheets, no arguments about the score.
+                Flutter + Firebase app with real-time multiplayer and live leaderboards.
+                I&apos;m also deep into the One Piece TCG — built an{' '}
+                <span className="text-[#fafafa] font-medium">inventory tracker</span> and
+                a <span className="text-[#fafafa] font-medium">physical card sorter</span>{' '}
+                that uses computer vision to identify and sort cards automatically.
               </p>
               <p>
-                When I&apos;m not coding, I&apos;m probably either at the table myself or
-                thinking about the next thing to build.
+                When I&apos;m not coding, you&apos;ll find me playing League of Legends,
+                grinding roguelikes, conquering maps in Paradox grand strategy games,
+                watching anime, or reading fantasy books.
               </p>
             </div>
           </AnimatedSection>
@@ -38,34 +44,13 @@ export default function About() {
           {/* Visual */}
           <AnimatedSection variants={slideInRight}>
             <div className="relative">
-              {/* Avatar placeholder */}
-              <div
-                className="w-full aspect-square max-w-sm mx-auto rounded-3xl flex items-center justify-center text-8xl font-bold relative overflow-hidden"
-                style={{
-                  background: 'linear-gradient(135deg, #18181b 0%, #27272a 100%)',
-                  border: '1px solid #27272a',
-                }}
-              >
-                {/* Gradient accent */}
-                <div
-                  className="absolute inset-0 opacity-10"
-                  style={{
-                    background:
-                      'radial-gradient(circle at top right, #a78bfa, transparent 60%)',
-                  }}
-                />
-                <span
-                  className="relative z-10"
-                  style={{
-                    background: 'linear-gradient(135deg, #a78bfa, #818cf8)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                  }}
-                >
-                  CR
-                </span>
-              </div>
+              <Image
+                src="/photo.jpeg"
+                alt="Christopher Richter"
+                width={384}
+                height={384}
+                className="w-full aspect-square max-w-sm mx-auto rounded-3xl object-cover"
+              />
 
               {/* Floating tag */}
               <div

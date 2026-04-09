@@ -2,11 +2,12 @@
 
 import AnimatedSection from '@/components/AnimatedSection'
 import { staggerContainer, staggerItem } from '@/lib/animations'
-import { GitBranch, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import GitHubIcon from '@/components/GitHubIcon'
 
 const links = [
   {
-    icon: GitBranch,
+    icon: GitHubIcon,
     label: 'GitHub',
     href: 'https://github.com/rurfy',
     description: 'See what I\'m building',

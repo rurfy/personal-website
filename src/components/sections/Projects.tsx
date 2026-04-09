@@ -3,7 +3,9 @@
 import AnimatedSection from '@/components/AnimatedSection'
 import { staggerContainer, staggerItem } from '@/lib/animations'
 import { projects } from '@/data/projects'
-import { ExternalLink, GitBranch } from 'lucide-react'
+import { ExternalLink, ArrowRight } from 'lucide-react'
+import GitHubIcon from '@/components/GitHubIcon'
+import Link from 'next/link'
 
 export default function Projects() {
   return (
@@ -86,7 +88,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 text-sm text-[#71717a] hover:text-[#fafafa] transition-colors duration-200"
                       >
-                        <GitBranch className="w-4 h-4" />
+                        <GitHubIcon className="w-4 h-4" />
                         GitHub
                       </a>
                     )}
@@ -100,6 +102,15 @@ export default function Projects() {
                         <ExternalLink className="w-4 h-4" />
                         Live
                       </a>
+                    )}
+                    {project.slug && (
+                      <Link
+                        href={`/projects/${project.slug}`}
+                        className="flex items-center gap-2 text-sm text-[#a78bfa] hover:text-[#fafafa] transition-colors duration-200 ml-auto"
+                      >
+                        View project
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
                     )}
                   </div>
                 </div>
