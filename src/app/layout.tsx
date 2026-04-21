@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Syne } from 'next/font/google'
+import Grain from '@/components/Grain'
 import './globals.css'
 
 const inter = Inter({
@@ -8,15 +9,21 @@ const inter = Inter({
   display: 'swap',
 })
 
+const syne = Syne({
+  subsets: ['latin'],
+  variable: '--font-syne',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
-  title: 'Christopher Richter — Software Engineer',
+  title: 'Christopher Richter — Building data-driven apps for games and communities',
   description:
-    'Software engineer building mobile and web applications. Creator of Beerpong App.',
+    'Next.js, Flutter, and the data layer underneath. BeerpongApp on iOS/Android, esports analytics for Infinity Esports.',
   keywords: ['Christopher Richter', 'software engineer', 'Flutter', 'React', 'Next.js'],
   authors: [{ name: 'Christopher Richter' }],
   openGraph: {
-    title: 'Christopher Richter — Software Engineer',
-    description: 'Software engineer building mobile and web applications.',
+    title: 'Christopher Richter — Building data-driven apps for games and communities',
+    description: 'Next.js, Flutter, and the data layer underneath. BeerpongApp on iOS/Android, esports analytics for Infinity Esports.',
     type: 'website',
   },
 }
@@ -27,8 +34,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body>{children}</body>
+    <html lang="en" className={`${inter.variable} ${syne.variable}`}>
+      <body>
+        {children}
+        <Grain />
+      </body>
     </html>
   )
 }

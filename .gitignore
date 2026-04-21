@@ -27,6 +27,9 @@ yarn-error.log*
 .env*.local
 .env
 
+# Claude
+.omc
+
 # vercel
 .vercel
 
